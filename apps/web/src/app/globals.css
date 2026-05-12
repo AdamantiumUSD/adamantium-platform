@@ -2,17 +2,27 @@
 @tailwind components;
 @tailwind utilities;
 
-* {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
-  margin: 0;
-  padding: 0;
 }
 
-html,
+html {
+  height: 100%;
+}
+
 body {
   height: 100%;
+  margin: 0;
+  padding: 0;
   background-color: #0d0f11;
   color: #e2e4e7;
+}
+
+#__next,
+[data-nextjs-scroll-focus-boundary] {
+  height: 100%;
 }
 
 ::-webkit-scrollbar {
